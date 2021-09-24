@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is your address?</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <form action="address.html" method="post">
+        <fieldset>
+            <label for="street">Street</label>
+            <input name="street" id="street" maxlength="50" autocomplete="false">
+        </fieldset>
+        
+        <fieldset>
+            <label for="street2">Street</label>
+            <input name="street2" id="street2" maxlength="50" autocomplete="false">>
+        </fieldset>
+
+        <fieldset>
+            <label for="state">State</label>
+            <select name="state" id="state">
+                <option value="CT">Connecticut</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NY">New York</option>
+            </select>
+        </fieldset>
+
+        
+        <fieldset>
+            <label for="postalCode">ZIP</label>
+            <input name="postalCode" id="postalCode" maxlength="10" autocomplete="false">>
+        </fieldset>
+    </form>
+</body>
+</html>

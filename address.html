@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is your address?</title>
     <link href="style.css" rel="stylesheet">
+    <!-- <script src="main.js"></script> -->
+    <script src="supplemental.js"></script>
 </head>
 <body>
-    <form action="address.html" method="post">
+    <form action="address.html" method="post" autocomplete="off" name="addressForm" id="addressForm">
         <fieldset>
             <label for="street">Street</label>
-            <input name="street" id="street" maxlength="50" autocomplete="false">
+            <input name="street" id="street" maxlength="50" autocomplete="off">
         </fieldset>
         
         <fieldset>
             <label for="street2">Street (extended, optional)</label>
-            <input name="street2" id="street2" maxlength="50" autocomplete="false">>
+            <input name="street2" id="street2" maxlength="50" autocomplete="false">
         </fieldset>
 
         <fieldset>
@@ -29,12 +31,12 @@
 
         <fieldset>
             <label for="postalCode">ZIP</label>
-            <input name="postalCode" id="postalCode" maxlength="10" autocomplete="false">>
+            <input name="postalCode" id="postalCode" maxlength="10" autocomplete="false">
         </fieldset>
 
         <button type="submit">Submit</button>
 
-        <button type="reset">Reset</button>
+        <button type="reset" onclick="reset()">Reset</button>
     </form>
 </body>
 </html>

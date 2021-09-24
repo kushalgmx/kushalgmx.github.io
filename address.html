@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What is your address?</title>
     <link href="style.css" rel="stylesheet">
-    <!-- <script src="main.js"></script> -->
-    <script src="supplemental.js"></script>
 </head>
+
 <body>
     <form action="address.html" method="post" autocomplete="off" name="addressForm" id="addressForm">
         <fieldset>
             <label for="street">Street</label>
             <input name="street" id="street" maxlength="50" autocomplete="off">
         </fieldset>
-        
+
         <fieldset>
             <label for="street2">Street (extended, optional)</label>
             <input name="street2" id="street2" maxlength="50" autocomplete="false">
@@ -38,5 +38,11 @@
 
         <button type="reset" onclick="reset()">Reset</button>
     </form>
+
+    <div id="debugging"></div>
+
+    <!-- <script src="main.js"></script> -->
+    <script src="supplemental.js"></script>
 </body>
+
 </html>

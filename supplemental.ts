@@ -9,14 +9,18 @@ const randomString = uuidv4();
 randomizeElementNameAndId("street");
 randomizeElementNameAndId("street2");
 randomizeElementNameAndId("state");
-randomizeElementNameAndId("zip");
+randomizeElementNameAndId("postalCode");
 
 function randomizeElementNameAndId(id: string): void {
+    console.info({ id });
+    console.info({ randomString });
     const element = document.getElementById(id);
+    console.info({ element });
     if (element) {
         const newId = `${element.id}-${randomString}`;
         element.id = newId;
         element.setAttribute("name", newId);
+        printDebugging(element.id);
     }
 }
 
@@ -26,4 +30,15 @@ function reset() {
     addressForm.reset();
 }
 
-console.log(uuidv4());
+// console.log(uuidv4());
+
+function printDebugging(element: string): void {
+    // 1. Select the div element using the id property
+    const app = document.getElementById("debugging");
+    // 2. Create a new <p></p> element programmatically
+    const p1 = document.createElement("p");
+    // 3. Add the text content
+    p1.textContent = `Id: ${element}`;
+    // 4. Append the p element to the div element
+    app?.appendChild(p1);
+}

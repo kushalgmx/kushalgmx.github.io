@@ -1,0 +1,7 @@
+{
+  "name": "membersmark",
+  "packageManager": "yarn@3.0.2",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}

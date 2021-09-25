@@ -2,6 +2,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.story {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 1px dashed;
+}
+
 .day {
     background: #eee;
     color: black;

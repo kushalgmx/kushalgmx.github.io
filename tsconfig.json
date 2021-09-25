@@ -3,5 +3,9 @@
   "compileOnSave": true,
   "include": [
     "./src/**/*"
-  ]
+  ],
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "ESNext"
+  }
 }

@@ -59,3 +59,6 @@ function decodeHtml(html) {
     txt.innerHTML = html;
     return txt.value;
 }
+function addTwoNumbers(first, second) {
+    return first + second;
+}

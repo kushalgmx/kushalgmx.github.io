@@ -1,4 +1,5 @@
 {
   "extends": "./configs/base",
-  "files": ["main.ts", "supplemental.ts"]
+  "files": [ "main.ts", "supplemental.ts" ],
+  "compileOnSave": true
 }

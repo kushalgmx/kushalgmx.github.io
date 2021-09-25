@@ -63,3 +63,7 @@ function decodeHtml(html: string): string {
     txt.innerHTML = html;
     return txt.value;
 }
+
+function addTwoNumbers(first: number, second: number): number {
+    return first + second;
+}

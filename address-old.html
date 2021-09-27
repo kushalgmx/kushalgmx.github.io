@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is your address?</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="address.html" method="post" autocomplete="off" name="addressForm" id="addressForm">
+        <fieldset>
+            <label for="street"> S t r e e t </label>
+            <input name="street" id="street" maxlength="50" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+        </fieldset>
+
+        <fieldset>
+            <label for="street2"> S t r e e t (extended, optional)</label>
+            <input name="street2" id="street2" maxlength="50" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+        </fieldset>
+
+        <fieldset>
+            <label for="state">  S t a t e    </label>
+            <select name="state" id="state">
+                <option value="CT">Connecticut</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NY">New York</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <label for="postalCode">    Z I   P    </label>
+            <input name="postalCode" id="postalCode" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" inputmode="numeric" minlength="5" maxlength="5">
+        </fieldset>
+
+        <button type="submit">Submit</button>
+
+        <button type="reset" onclick="reset()">Reset</button>
+    </form>
+
+    <div id="debugging"></div>
+
+    <!-- <script src="main.js"></script> -->
+    <script src="src/addressOld.js"></script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ function randomizeElementNameAndId(id: string): void {
     const element = document.getElementById(id);
     console.info({ element });
     if (element) {
-        const newId = `${element.id}-${randomString}`;
+        const newId = `${reverse(element.id)}-${randomString}`;
         element.id = newId;
         element.setAttribute("name", newId);
         printDebugging(element.id);
@@ -47,4 +47,8 @@ function printDebugging(element: string): void {
     p1.textContent = `Id: ${element}`;
     // 4. Append the p element to the div element
     app?.appendChild(p1);
+}
+
+function reverse(s: string): string{
+    return [...s].reverse().join("");
 }

@@ -12,12 +12,12 @@
     <form action="address.html" method="post" autocomplete="off" name="addressForm" id="addressForm">
         <fieldset>
             <label for="street"> S t r e e t </label>
-            <input name="street" id="street" maxlength="50" autocomplete="off">
+            <input name="street" id="street" maxlength="50" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
         </fieldset>
 
         <fieldset>
             <label for="street2"> S t r e e t (extended, optional)</label>
-            <input name="street2" id="street2" maxlength="50" autocomplete="false">
+            <input name="street2" id="street2" maxlength="50" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
         </fieldset>
 
         <fieldset>
@@ -31,7 +31,7 @@
 
         <fieldset>
             <label for="postalCode">    Z I   P    </label>
-            <input name="postalCode" id="postalCode" autocomplete="false" inputmode="numeric" minlength="5" maxlength="5">
+            <input name="postalCode" id="postalCode" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" inputmode="numeric" minlength="5" maxlength="5">
         </fieldset>
 
         <button type="submit">Submit</button>

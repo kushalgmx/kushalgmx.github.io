@@ -21,6 +21,12 @@ function randomizeElementNameAndId(id: string): void {
         element.id = newId;
         element.setAttribute("name", newId);
         printDebugging(element.id);
+
+        const labelElements = document.getElementsByTagName('label');
+        for (const labelElement of labelElements)
+            if (labelElement.htmlFor === id) {
+                labelElement.htmlFor = newId;
+            }
     }
 }
 

@@ -15,7 +15,7 @@ function randomizeElementNameAndIdOld(id) {
     const element = document.getElementById(id);
     console.info({ element });
     if (element) {
-        const newId = `${reverseOld(element.id)}-${randomStringOld}`;
+        const newId = `${element.id}-${randomStringOld}`;
         element.id = newId;
         element.setAttribute("name", newId);
         printDebuggingOld(element.id);

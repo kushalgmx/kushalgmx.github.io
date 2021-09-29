@@ -5,10 +5,33 @@ function uuidv4() {
     });
 }
 const randomString = uuidv4();
-randomizeElementNameAndId("street");
-randomizeElementNameAndId("street2");
-randomizeElementNameAndId("state");
-randomizeElementNameAndId("postalCode");
+if (window.location.href.includes("address.html")) {
+    randomizeElementNameAndId("street");
+    randomizeElementNameAndId("street2");
+    randomizeElementNameAndId("state");
+    randomizeElementNameAndId("postalCode");
+}
+if (window.location.href.includes("address-nospace.html")) {
+    setTimeout(function () {
+        manipulateLabel("street", "Street");
+        manipulateLabel("street2", "Street 2");
+        manipulateLabel("state", "State");
+        manipulateLabel("postalCode", "ZIP");
+    }, 2000);
+}
+function manipulateLabel(id, label) {
+    console.info({ labelId: id });
+    const elements = document.getElementsByTagName("label");
+    console.info({ element: elements });
+    for (let element of elements) {
+        if (element.htmlFor.includes(id)) {
+            console.info({ element });
+            const labelElement = element;
+            labelElement.innerHTML = randomString;
+            labelElement.innerHTML = label;
+        }
+    }
+}
 function randomizeElementNameAndId(id) {
     console.info({ id });
     console.info({ randomString });

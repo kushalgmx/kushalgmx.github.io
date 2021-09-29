@@ -6,10 +6,37 @@ function uuidv4(): string {
 }
 
 const randomString = uuidv4();
-randomizeElementNameAndId("street");
-randomizeElementNameAndId("street2");
-randomizeElementNameAndId("state");
-randomizeElementNameAndId("postalCode");
+
+if (window.location.href.includes("address.html")) {
+    randomizeElementNameAndId("street");
+    randomizeElementNameAndId("street2");
+    randomizeElementNameAndId("state");
+    randomizeElementNameAndId("postalCode");
+}
+
+
+if (window.location.href.includes("address-nospace.html")) {
+    setTimeout(function () {
+        manipulateLabel("street", "Street");
+        manipulateLabel("street2", "Street 2");
+        manipulateLabel("state", "State");
+        manipulateLabel("postalCode", "ZIP");
+    }, 2000);
+}
+
+function manipulateLabel(id: string, label: string): void {
+    console.info({ labelId: id });
+    const elements = document.getElementsByTagName("label");
+    console.info({ element: elements });
+    for (let element of elements) {
+        if (element.htmlFor.includes(id)) {
+            console.info({ element });
+            const labelElement = element as HTMLLabelElement;
+            labelElement.innerHTML = randomString;
+            labelElement.innerHTML = label;
+        }
+    }
+}
 
 function randomizeElementNameAndId(id: string): void {
     console.info({ id });
@@ -49,6 +76,6 @@ function printDebugging(element: string): void {
     app?.appendChild(p1);
 }
 
-function reverse(s: string): string{
+function reverse(s: string): string {
     return [...s].reverse().join("");
 }

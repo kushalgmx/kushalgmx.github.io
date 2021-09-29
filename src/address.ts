@@ -15,7 +15,6 @@ if (window.location.href.includes("address.html")) {
     randomizeElementNameAndId("postalCode");
 }
 
-
 if (window.location.href.includes("address-nospace.html")) {
     setInterval(function () {
         let randomString2 = uuidv4();

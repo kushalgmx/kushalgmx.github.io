@@ -35,6 +35,9 @@ function manipulateLabel(id: string, label: string): void {
             labelElement.innerHTML = randomString;
             labelElement.innerHTML = label;
             labelElement.htmlFor = `${labelElement.htmlFor}-${randomString}`;
+            if (labelElement.htmlFor.length > 9000) {
+                labelElement.htmlFor = id;
+            }
         }
     }
 }

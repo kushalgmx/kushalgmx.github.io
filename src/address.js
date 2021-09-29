@@ -34,8 +34,10 @@ function randomizeElementNameAndLabelv2(id, label, randomString2) {
             element.id = newId;
             element.setAttribute("name", newId);
             const labelElements = document.getElementsByTagName('label');
+            console.info({ labelElements });
             for (const labelElement of labelElements) {
-                if (labelElement.htmlFor === element.id) {
+                if (labelElement.htmlFor.includes(id)) {
+                    console.info({ labelElement });
                     labelElement.htmlFor = newId;
                     labelElement.innerHTML = uuidv4();
                     labelElement.innerHTML = label;

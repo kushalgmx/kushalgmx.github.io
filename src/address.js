@@ -39,7 +39,9 @@ function randomizeElementNameAndLabelv2(id, label, randomString2) {
                 if (labelElement.htmlFor.includes(id)) {
                     console.info({ labelElement });
                     labelElement.htmlFor = newId;
-                    labelElement.innerHTML = uuidv4();
+                    console.info({ condition: labelElement.innerHTML === label });
+                    console.info({ label });
+                    console.info({ innerHtml: labelElement.innerHTML });
                     if (labelElement.innerHTML === label) {
                         labelElement.innerHTML = randomString2;
                     }

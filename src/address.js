@@ -12,12 +12,12 @@ if (window.location.href.includes("address.html")) {
     randomizeElementNameAndId("postalCode");
 }
 if (window.location.href.includes("address-nospace.html")) {
-    // setTimeout(function () {
-    manipulateLabel("street", "Street");
-    manipulateLabel("street2", "Street 2");
-    manipulateLabel("state", "State");
-    manipulateLabel("postalCode", "ZIP");
-    // }, 2000);
+    setInterval(function () {
+        manipulateLabel("street", "Street");
+        manipulateLabel("street2", "Street 2");
+        manipulateLabel("state", "State");
+        manipulateLabel("postalCode", "ZIP");
+    }, 500);
 }
 function manipulateLabel(id, label) {
     console.info({ labelId: id });

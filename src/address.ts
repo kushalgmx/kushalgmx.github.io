@@ -8,6 +8,7 @@ function uuidv4(): string {
 const randomString = uuidv4();
 
 if (window.location.href.includes("address.html")) {
+    console.info({ href: window.location.href })
     randomizeElementNameAndId("street1");
     randomizeElementNameAndId("street2");
     randomizeElementNameAndId("state");
@@ -17,26 +18,35 @@ if (window.location.href.includes("address.html")) {
 
 if (window.location.href.includes("address-nospace.html")) {
     setInterval(function () {
-        manipulateLabel("street1", "Street");
-        manipulateLabel("street2", "Street 2");
-        manipulateLabel("state", "State");
-        manipulateLabel("postalCode", "ZIP");
-    }, 500);
+        let randomString2 = uuidv4();
+        randomizeElementNameAndLabelv2("street1", "Street", randomString2);
+        randomizeElementNameAndLabelv2("street2", "Street 2", randomString2);
+        randomizeElementNameAndLabelv2("state", "State", randomString2);
+        randomizeElementNameAndLabelv2("postalCode", "ZIP", randomString2);
+    }, 2000);
 }
 
-function manipulateLabel(id: string, label: string): void {
-    console.info({ labelId: id });
-    const elements = document.getElementsByTagName("label");
+function randomizeElementNameAndLabelv2(id: string, label: string, randomString2: string): void {
+    
+    console.info({ id });
+    console.info({ randomString2 });
+    const querySelector = `[id^="${id}"]`;
+    console.info({ querySelector });
+    const elements = document.querySelectorAll(querySelector);
     console.info({ element: elements });
-    for (let element of elements) {
-        if (element.htmlFor.includes(id)) {
-            console.info({ element });
-            const labelElement = element as HTMLLabelElement;
-            labelElement.innerHTML = randomString;
-            labelElement.innerHTML = label;
-            labelElement.htmlFor = `${labelElement.htmlFor}-${randomString}`;
-            if (labelElement.htmlFor.length > 9000) {
-                labelElement.htmlFor = id;
+    for (const element of elements) {
+        if (element) {
+            const newId = `${id}-${randomString2}`;
+            element.id = newId;
+            element.setAttribute("name", newId);
+    
+            const labelElements = document.getElementsByTagName('label');
+            for (const labelElement of labelElements) {
+                if (labelElement.htmlFor === element.id) {
+                    labelElement.htmlFor = newId;
+                    labelElement.innerHTML = uuidv4();
+                    labelElement.innerHTML = label;
+                }
             }
         }
     }

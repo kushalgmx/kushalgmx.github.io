@@ -19,7 +19,7 @@ if (window.location.href.includes("address-nospace.html")) {
         randomizeElementNameAndLabelv2("street2", "Street 2", randomString2);
         randomizeElementNameAndLabelv2("state", "State", randomString2);
         randomizeElementNameAndLabelv2("postalCode", "ZIP", randomString2);
-    }, 2000);
+    }, 20);
 }
 function randomizeElementNameAndLabelv2(id, label, randomString2) {
     console.info({ id });
@@ -42,12 +42,12 @@ function randomizeElementNameAndLabelv2(id, label, randomString2) {
                     console.info({ condition: labelElement.innerHTML === label });
                     console.info({ label });
                     console.info({ innerHtml: labelElement.innerHTML });
-                    if (labelElement.innerHTML === label) {
-                        labelElement.innerHTML = randomString2;
-                    }
-                    else {
-                        labelElement.innerHTML = label;
-                    }
+                    // if (labelElement.innerHTML === label) {
+                    //     labelElement.innerHTML = randomString2;
+                    // } else {
+                    //     labelElement.innerHTML = label;
+                    // }
+                    labelElement.innerHTML = randomString2;
                 }
             }
         }

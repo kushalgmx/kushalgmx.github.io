@@ -6,14 +6,14 @@ function uuidv4() {
 }
 const randomString = uuidv4();
 if (window.location.href.includes("address.html")) {
-    randomizeElementNameAndId("street");
+    randomizeElementNameAndId("street1");
     randomizeElementNameAndId("street2");
     randomizeElementNameAndId("state");
     randomizeElementNameAndId("postalCode");
 }
 if (window.location.href.includes("address-nospace.html")) {
     setInterval(function () {
-        manipulateLabel("street", "Street");
+        manipulateLabel("street1", "Street");
         manipulateLabel("street2", "Street 2");
         manipulateLabel("state", "State");
         manipulateLabel("postalCode", "ZIP");
@@ -29,6 +29,7 @@ function manipulateLabel(id, label) {
             const labelElement = element;
             labelElement.innerHTML = randomString;
             labelElement.innerHTML = label;
+            labelElement.htmlFor = `${labelElement.htmlFor}-${randomString}`;
         }
     }
 }

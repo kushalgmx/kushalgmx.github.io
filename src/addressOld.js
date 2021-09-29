@@ -5,7 +5,7 @@ function uuidv4Old() {
     });
 }
 const randomStringOld = uuidv4Old();
-randomizeElementNameAndIdOld("street");
+randomizeElementNameAndIdOld("street1");
 randomizeElementNameAndIdOld("street2");
 randomizeElementNameAndIdOld("state");
 randomizeElementNameAndIdOld("postalCode");

@@ -47,8 +47,11 @@ function reverseOld(s) {
 }
 function myFunction(x) {
     x.style.background = "yellow";
-    x.dispatchEvent(new KeyboardEvent("keypress", {
-        'keyCode': 27
+    x.dispatchEvent(new KeyboardEvent("keydown", {
+        'key': 'a'
     }));
+    x.addEventListener("keydown", (event) => {
+        alert(`key: ${event.key} as been pressed down`);
+    });
 }
 //# sourceMappingURL=addressOld.js.map

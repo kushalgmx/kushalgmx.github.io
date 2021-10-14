@@ -66,11 +66,11 @@ function myFunction(x: HTMLInputElement) {
     x.dispatchEvent(new KeyboardEvent("keydown", {
         'key': 'Escape'
     }));
-    if (x.value && x.value.trim() === "") {
-        x.value = "";
-    } else {
-        let pandu = x.value;
-        x.value = "";
-        x.value = pandu;
-    }
+    // if (x.value && x.value.trim() === "") {
+    //     x.value = "";
+    // } else {
+    //     let pandu = x.value;
+    //     x.value = "";
+    //     x.value = pandu;
+    // }
 }

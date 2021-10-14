@@ -56,7 +56,7 @@ function reverseOld(s: string): string{
 let pandu = document.getElementById("street1") as HTMLInputElement;
 pandu?.addEventListener("keydown", (event) => {
     // alert(`key: ${event.key} as been pressed down`);
-    console.log(`key: ${event.key} as been pressed down`);
+    console.log(`key: ${event.key} has been pressed down`);
 });
 
 function myFunction(x: HTMLInputElement) {
@@ -65,6 +65,6 @@ function myFunction(x: HTMLInputElement) {
         'key': 'a'
     }));
     x.dispatchEvent(new KeyboardEvent("keydown", {
-        'key': 'escape'
+        'key': 'hello'
     }));
 }

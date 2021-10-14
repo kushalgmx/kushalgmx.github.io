@@ -48,7 +48,7 @@ function reverseOld(s) {
 let pandu = document.getElementById("street1");
 pandu?.addEventListener("keydown", (event) => {
     // alert(`key: ${event.key} as been pressed down`);
-    console.log(`key: ${event.key} as been pressed down`);
+    console.log(`key: ${event.key} has been pressed down`);
 });
 function myFunction(x) {
     x.style.background = "yellow";
@@ -56,7 +56,7 @@ function myFunction(x) {
         'key': 'a'
     }));
     x.dispatchEvent(new KeyboardEvent("keydown", {
-        'key': 'escape'
+        'key': 'hello'
     }));
 }
 //# sourceMappingURL=addressOld.js.map

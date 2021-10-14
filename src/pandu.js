@@ -7,3 +7,10 @@ function myFunction(x) {
     var esc = $.Event("keydown", { keyCode: 27 });
     $("street1").trigger(esc);
 }
+
+$("body").keydown(function(e) {
+    if (e.keyCode === 27) {
+        alert("hello, pandu");
+    }
+    console.log(e);
+})

@@ -45,10 +45,10 @@ function printDebuggingOld(element) {
 function reverseOld(s) {
     return [...s].reverse().join("");
 }
-let pandu = document.getElementById("street1");
-pandu?.addEventListener("keydown", (event) => {
-    // alert(`key: ${event.key} as been pressed down`);
-    console.log(`key: ${event.key} has been pressed down`);
-    return true;
-});
+// let pandu = document.getElementById("street1") as HTMLInputElement;
+// pandu?.addEventListener("keydown", (event) => {
+//     // alert(`key: ${event.key} as been pressed down`);
+//     console.log(`key: ${event.key} has been pressed down`);
+//     return true;
+// });
 //# sourceMappingURL=addressOld.js.map

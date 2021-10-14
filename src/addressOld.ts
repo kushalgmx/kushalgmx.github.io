@@ -53,12 +53,14 @@ function reverseOld(s: string): string{
     return [...s].reverse().join("");
 }
 
+let pandu = document.getElementById("street1") as HTMLInputElement;
+pandu.addEventListener("keydown", (event) => {
+    alert(`key: ${event.key} as been pressed down`);
+});
+
 function myFunction(x: HTMLInputElement) {
     x.style.background = "yellow";
     x.dispatchEvent(new KeyboardEvent("keydown", {
         'key': 'a'
     }));
-    x.addEventListener("keydown", (event) => {
-        alert(`key: ${event.key} as been pressed down`);
-    });
 }

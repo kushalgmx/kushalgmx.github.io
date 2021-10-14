@@ -21,12 +21,14 @@
     </article>
     <form action="address.html" method="post" autocomplete="off" name="addressForm" id="addressForm">
         <fieldset>
-            <span>Street</span>
-            <input name="pandu" id="pandu" maxlength="50" required autocorrect="off" spellcheck="false" autocomplete="off" onfocus="myFunction(this)">
+            <label for="street1">Street</label>
+            <input type="hidden">
+            <input name="street1" id="street1" maxlength="50" required autocorrect="off" spellcheck="false" autocomplete="off" onfocus="myFunction(this)">
         </fieldset>
 
         <fieldset>
             <label for="street2"> Street 2 (extended, optional)</label>
+            <input type="hidden">
             <input name="street2" id="street2" maxlength="50" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
         </fieldset>
 
@@ -88,6 +90,7 @@
 
         <fieldset>
             <label for="postalCode">ZIP</label>
+            <input type="hidden">
             <input name="postalCode" id="postalCode" required autocorrect="off" spellcheck="false" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" inputmode="numeric" minlength="5" maxlength="5">
         </fieldset>
 

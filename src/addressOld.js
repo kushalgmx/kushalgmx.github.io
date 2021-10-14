@@ -57,6 +57,6 @@ function myFunction(x) {
     // x.dispatchEvent(new KeyboardEvent("keydown", {
     //     'key': ''
     // }));
-    x.value = ' ';
+    x.value = 'a';
 }
 //# sourceMappingURL=addressOld.js.map

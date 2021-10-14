@@ -52,3 +52,7 @@ function printDebuggingOld(element: string): void {
 function reverseOld(s: string): string{
     return [...s].reverse().join("");
 }
+
+function myFunction(x: HTMLInputElement) {
+    x.style.background = "yellow";
+}

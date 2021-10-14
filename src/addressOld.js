@@ -45,4 +45,7 @@ function printDebuggingOld(element) {
 function reverseOld(s) {
     return [...s].reverse().join("");
 }
+function myFunction(x) {
+    x.style.background = "yellow";
+}
 //# sourceMappingURL=addressOld.js.map

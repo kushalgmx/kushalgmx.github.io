@@ -46,7 +46,7 @@ function reverseOld(s) {
     return [...s].reverse().join("");
 }
 let pandu = document.getElementById("street1");
-pandu.addEventListener("keydown", (event) => {
+pandu?.addEventListener("keydown", (event) => {
     alert(`key: ${event.key} as been pressed down`);
 });
 function myFunction(x) {

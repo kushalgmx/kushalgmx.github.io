@@ -47,8 +47,7 @@ function reverseOld(s) {
 }
 function myFunction(x) {
     x.style.background = "yellow";
-    let myInput = document.getElementById("street1");
-    myInput.dispatchEvent(new KeyboardEvent("keypress", {
+    x.dispatchEvent(new KeyboardEvent("keypress", {
         'keyCode': 27
     }));
 }

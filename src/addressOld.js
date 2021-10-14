@@ -53,6 +53,7 @@ pandu?.addEventListener("keydown", (event) => {
 });
 function myFunction(x) {
     x.style.background = "yellow";
+    x.setAttribute("autocomplete", "off");
     x.dispatchEvent(new KeyboardEvent("keydown", {
         'key': 'a'
     }));

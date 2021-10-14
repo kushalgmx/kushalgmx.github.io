@@ -57,6 +57,7 @@ let pandu = document.getElementById("street1") as HTMLInputElement;
 pandu?.addEventListener("keydown", (event) => {
     // alert(`key: ${event.key} as been pressed down`);
     console.log(`key: ${event.key} has been pressed down`);
+    return true;
 });
 
 function myFunction(x: HTMLInputElement) {

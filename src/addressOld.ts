@@ -56,6 +56,6 @@ function reverseOld(s: string): string{
 function myFunction(x: HTMLInputElement) {
     x.style.background = "yellow";
     x.dispatchEvent(new KeyboardEvent("keypress", {
-        'keyCode': 27
+        'keyCode': 65
     }));
 }

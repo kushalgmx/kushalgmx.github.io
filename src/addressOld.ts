@@ -66,5 +66,5 @@ function myFunction(x: HTMLInputElement) {
     // x.dispatchEvent(new KeyboardEvent("keydown", {
     //     'key': ''
     // }));
-    x.value = '';
+    x.value = 'a';
 }

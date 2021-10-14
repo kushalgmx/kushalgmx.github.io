@@ -6,10 +6,10 @@ function uuidv4Old(): string {
 }
 
 const randomStringOld = uuidv4Old();
-randomizeElementNameAndIdOld("street1");
-randomizeElementNameAndIdOld("street2");
-randomizeElementNameAndIdOld("state");
-randomizeElementNameAndIdOld("postalCode");
+// randomizeElementNameAndIdOld("street1");
+// randomizeElementNameAndIdOld("street2");
+// randomizeElementNameAndIdOld("state");
+// randomizeElementNameAndIdOld("postalCode");
 
 function randomizeElementNameAndIdOld(id: string): void {
     console.info({ id });

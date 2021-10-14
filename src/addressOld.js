@@ -5,10 +5,10 @@ function uuidv4Old() {
     });
 }
 const randomStringOld = uuidv4Old();
-randomizeElementNameAndIdOld("street1");
-randomizeElementNameAndIdOld("street2");
-randomizeElementNameAndIdOld("state");
-randomizeElementNameAndIdOld("postalCode");
+// randomizeElementNameAndIdOld("street1");
+// randomizeElementNameAndIdOld("street2");
+// randomizeElementNameAndIdOld("state");
+// randomizeElementNameAndIdOld("postalCode");
 function randomizeElementNameAndIdOld(id) {
     console.info({ id });
     console.info({ randomString: randomStringOld });

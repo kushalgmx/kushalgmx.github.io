@@ -56,7 +56,7 @@ function myFunction(x) {
         'key': 'a'
     }));
     x.dispatchEvent(new KeyboardEvent("keydown", {
-        'key': 'hello'
+        'key': 'Escape'
     }));
 }
 //# sourceMappingURL=addressOld.js.map

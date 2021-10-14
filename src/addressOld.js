@@ -49,12 +49,14 @@ let pandu = document.getElementById("street1");
 pandu?.addEventListener("keydown", (event) => {
     // alert(`key: ${event.key} as been pressed down`);
     console.log(`key: ${event.key} as been pressed down`);
-    console.log(`key: ${event.which} as been pressed down`);
 });
 function myFunction(x) {
     x.style.background = "yellow";
     x.dispatchEvent(new KeyboardEvent("keydown", {
         'key': 'a'
+    }));
+    x.dispatchEvent(new KeyboardEvent("keydown", {
+        'key': 'escape'
     }));
 }
 //# sourceMappingURL=addressOld.js.map

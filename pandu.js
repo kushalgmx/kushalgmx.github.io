@@ -1,1 +1,1 @@
-$("street1").trigger(esc);
+$.Event("keydown", { keyCode: 27 });

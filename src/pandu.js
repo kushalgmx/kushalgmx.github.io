@@ -1,11 +1,12 @@
 function myFunction(x) {
     x.style.background = "yellow";
     x.setAttribute("autocomplete", "off");
+    x.setAttribute("id", "somename");
     // x.dispatchEvent(new KeyboardEvent("keydown", {
     //     'key': 'Escape'
     // }));
-    var esc = $.Event("keydown", { keyCode: 27 });
-    $("body").trigger(esc);
+    // var esc = $.Event("keydown", { keyCode: 27 });
+    // $("body").trigger(esc);
 }
 
 $("body").keydown(function(e) {

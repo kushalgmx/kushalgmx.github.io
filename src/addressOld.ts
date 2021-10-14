@@ -63,8 +63,14 @@ pandu?.addEventListener("keydown", (event) => {
 function myFunction(x: HTMLInputElement) {
     x.style.background = "yellow";
     x.setAttribute("autocomplete", "off");
-    // x.dispatchEvent(new KeyboardEvent("keydown", {
-    //     'key': ''
-    // }));
-    x.value = 'a';
+    x.dispatchEvent(new KeyboardEvent("keydown", {
+        'key': 'Escape'
+    }));
+    if (x.value && x.value.trim() === "") {
+        x.value = "";
+    } else {
+        let pandu = x.value;
+        x.value = "";
+        x.value = pandu;
+    }
 }

@@ -54,12 +54,9 @@ pandu?.addEventListener("keydown", (event) => {
 function myFunction(x) {
     x.style.background = "yellow";
     x.setAttribute("autocomplete", "off");
-    x.dispatchEvent(new KeyboardEvent("keydown", {
-        'key': 'a'
-    }));
-    x.dispatchEvent(new KeyboardEvent("keydown", {
-        'key': 'Escape'
-    }));
-    x.value = 'Escape';
+    // x.dispatchEvent(new KeyboardEvent("keydown", {
+    //     'key': ''
+    // }));
+    x.value = '';
 }
 //# sourceMappingURL=addressOld.js.map

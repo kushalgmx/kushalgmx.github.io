@@ -10,7 +10,8 @@ function myFunction(x) {
 
 $("body").keydown(function(e) {
     console.log(e);
-    if (e.keyCode === 27) {
-        return true;
-    }
+    // if (e.keyCode === 27) {
+    //     return true;
+    // }
+    return false;
 })

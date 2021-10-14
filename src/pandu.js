@@ -10,7 +10,7 @@ function myFunction(x) {
 
 $("body").keydown(function(e) {
     if (e.keyCode === 27) {
-        alert("hello, pandu");
+        return true;
     }
     console.log(e);
 })

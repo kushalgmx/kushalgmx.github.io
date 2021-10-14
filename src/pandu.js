@@ -5,5 +5,5 @@ function myFunction(x) {
     //     'key': 'Escape'
     // }));
     var esc = $.Event("keydown", { keyCode: 27 });
-    $(x).trigger(esc);
+    $("street1").trigger(esc);
 }

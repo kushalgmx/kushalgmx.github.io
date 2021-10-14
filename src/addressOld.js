@@ -48,6 +48,8 @@ function reverseOld(s) {
 let pandu = document.getElementById("street1");
 pandu?.addEventListener("keydown", (event) => {
     // alert(`key: ${event.key} as been pressed down`);
+    console.log(`key: ${event.key} as been pressed down`);
+    console.log(`key: ${event.which} as been pressed down`);
 });
 function myFunction(x) {
     x.style.background = "yellow";
